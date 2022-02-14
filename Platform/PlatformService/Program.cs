@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PlatformModels.Data;
+using PlatformModels.Mappers;
 using PlatformModels.Models;
 using PlatformService.Repositories;
 
@@ -17,8 +18,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
+builder.Services.AddAutoMapper(typeof(PlatformProfile));
 #endregion;
 
 var app = builder.Build();
