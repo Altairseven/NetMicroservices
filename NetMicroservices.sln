@@ -12,6 +12,34 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlatformService", "Platform
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlatformModels", "Platform\PlatformModels\PlatformModels.csproj", "{304FF9D7-EE4F-4AAC-9DFB-B82CD7D9C011}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{A4E99B7D-A66F-4852-834B-72B5A99750A0}"
+	ProjectSection(SolutionItems) = preProject
+		K8S\commands-depl.yaml = K8S\commands-depl.yaml
+		K8S\ingress-srv.yaml = K8S\ingress-srv.yaml
+		K8S\local-pvc.yaml = K8S\local-pvc.yaml
+		K8S\mssql-np-srv.yml = K8S\mssql-np-srv.yml
+		K8S\mssql-plat-depl.yaml = K8S\mssql-plat-depl.yaml
+		K8S\platforms-depl.yaml = K8S\platforms-depl.yaml
+		K8S\platforms-np-srv.yml = K8S\platforms-np-srv.yml
+		K8S\rabbitmq-depl.yaml = K8S\rabbitmq-depl.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0DA6239-D8D3-409E-9177-8202CDF9B28E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Command", "Command", "{5A0E2180-9FDA-4737-AFE6-0CFF5066B933}"
+	ProjectSection(SolutionItems) = preProject
+		Command\Dockerfile = Command\Dockerfile
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandService", "Command\CommandService\CommandService.csproj", "{34794FD6-7981-443E-8C43-5510BC93832E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandModels", "Command\CommandModels\CommandModels.csproj", "{22A9B9AC-26B7-416B-B2EC-D94974B1C1C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +54,14 @@ Global
 		{304FF9D7-EE4F-4AAC-9DFB-B82CD7D9C011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{304FF9D7-EE4F-4AAC-9DFB-B82CD7D9C011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{304FF9D7-EE4F-4AAC-9DFB-B82CD7D9C011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34794FD6-7981-443E-8C43-5510BC93832E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34794FD6-7981-443E-8C43-5510BC93832E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34794FD6-7981-443E-8C43-5510BC93832E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34794FD6-7981-443E-8C43-5510BC93832E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A9B9AC-26B7-416B-B2EC-D94974B1C1C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A9B9AC-26B7-416B-B2EC-D94974B1C1C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A9B9AC-26B7-416B-B2EC-D94974B1C1C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A9B9AC-26B7-416B-B2EC-D94974B1C1C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,6 +69,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E026BFB4-7A02-47C4-9970-03E9DB43B264} = {130089C6-0B71-46EA-BE16-081F2A64237F}
 		{304FF9D7-EE4F-4AAC-9DFB-B82CD7D9C011} = {130089C6-0B71-46EA-BE16-081F2A64237F}
+		{34794FD6-7981-443E-8C43-5510BC93832E} = {5A0E2180-9FDA-4737-AFE6-0CFF5066B933}
+		{22A9B9AC-26B7-416B-B2EC-D94974B1C1C7} = {5A0E2180-9FDA-4737-AFE6-0CFF5066B933}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9CE1EB4B-10A3-4FA4-93E8-8C16466753BF}

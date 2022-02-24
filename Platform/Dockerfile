@@ -1,4 +1,5 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk AS build-env
+﻿# BUILD
+FROM mcr.microsoft.com/dotnet/sdk AS build-env
 
 WORKDIR /app
 RUN mkdir PlatformModels
@@ -13,6 +14,7 @@ RUN dotnet restore PlatformService
 
 RUN dotnet publish PlatformService -c Release -o out
 
+# RUN
 FROM mcr.microsoft.com/dotnet/aspnet
 
 WORKDIR /app

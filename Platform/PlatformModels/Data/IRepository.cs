@@ -1,12 +1,12 @@
-﻿namespace PlatformModels.Data {
-    public interface IRepository<T> {
+﻿namespace PlatformModels.Data;
 
-        bool SaveChanges();
+public interface IRepository<T> {
 
-        IEnumerable<T> GetAll();
-        T? GetById(int id);
+    bool SaveChanges();
 
-        void Create(T x);
+    IEnumerable<T> GetAll();
+    T? GetById(int id);
 
-    }
+    void Create(T x);
+
 }

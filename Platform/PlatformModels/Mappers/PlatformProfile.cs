@@ -8,11 +8,12 @@ using PlatformModels.Dtos;
 using PlatformModels.Models;
 
 namespace PlatformModels.Mappers {
-    public class PlatformProfile : Profile {
+    public class PlatformModelsProfile : Profile {
 
-        public PlatformProfile() {
+        public PlatformModelsProfile() {
             CreateMap<Platform, PlatformDto>();
             CreateMap<PlatformCreateDto, Platform>();
+            CreateMap<PlatformDto, PlatformPublishDto>();
         }
     }
 }
